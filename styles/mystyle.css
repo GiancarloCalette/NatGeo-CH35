@@ -1,0 +1,125 @@
+/*global*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+body{
+    font-family: 'Lato', sans-serif;
+    background-color: black;
+    color: white;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+img.icon{
+    height: 1px;
+}
+/*utilities*/
+
+/*nav*/
+nav.navigation{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    justify-content: space-between;
+    height: 32px;
+}
+nav .menu{
+    display: flex;
+    justify-items: center;
+}
+nav .logo{
+    display:none;
+}
+nav .icon{
+    height: 22px;
+    padding-left: 12px;
+}
+a.link-login{
+    text-transform: uppercase;
+    font-size: 8px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    margin: 4px;
+    padding: 11px;
+    color:black
+}
+a.link-search{
+    display: none;
+}
+a.link-subs{
+    text-transform: uppercase;
+    font-size: 8px;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    box-shadow: inset 0 0 0 0 #ffcc00;
+    color: white;
+    background-color: black;
+    margin: 4px;
+    padding: 11px;
+    transition: color .3s ease-in-out, box-shadow .4s ease-in-out;
+
+}
+a.link-subs:hover{
+    color: black;
+    box-shadow: inset 200px 0 0 0 #ffcc00;;
+}
+a.link-menu{
+    display: none;
+}
+a.link-arrows{
+    display: flex;
+    align-self: center;
+    color: black;
+    margin-left: 12px;
+    margin-right: 20px;
+}
+/*header*/
+.header{
+    display: contents;
+    text-align: center;
+    height: 50px;
+}
+.header .title{
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bolder;
+    letter-spacing: 3px;
+    margin-top: 33px;
+    margin-bottom: 10px;
+}
+.header .text{
+    font-size: 12px;
+    line-height: 1.4;
+    margin-bottom: none;
+}
+
+.header .text span{
+    background:
+    linear-gradient(
+      to right,
+      #ffcc00,
+      #ffcc00
+    );
+    background-size: 100% 1.5px, 0 1.5px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 200ms;
+}
+header .text span:hover{
+    --_d: 100%;
+    color: black;
+    background: 
+        linear-gradient(#ffcc00 0 0) 
+        bottom/100% var(--_d, 0) no-repeat;
+    transition: 0.2s;
+    cursor: pointer;
+}
+header .border{
+    width: 20px;
+    height: 3px;
+    margin: 15px auto 0;
+    margin-bottom: 35px;
+    background-color: #ffcc00;
+    line-height: 0;
+}

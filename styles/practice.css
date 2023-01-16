@@ -1,0 +1,15 @@
+td,th{
+    width: 100px;
+    height: 25px;
+    text-align: left;
+}
+th{
+    background-color: #9F9BF2;
+    color: #443773;
+    border-collapse: collapse;
+}
+td{
+    background-color: #EDF0FF;
+    border-bottom:5px white;
+    border-collapse: bottom;
+}
