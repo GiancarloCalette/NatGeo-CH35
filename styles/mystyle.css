@@ -20,14 +20,19 @@ img.icon{
     width: 95%;
     margin: 0 auto;
 }
+@media(min-width: 768px){
+    .container{
+        width: 90%;
+    }
+}
 .read-btn{
     margin-top: 0;
     text-decoration: none;
     text-transform: uppercase;
-    font-size: 9px;
+    font-size: 11px;
     font-weight: bold;
     color: white;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
 /*nav*/
@@ -36,7 +41,7 @@ nav.navigation{
     align-items: center;
     background-color: white;
     justify-content: space-between;
-    height: 32px;
+    height: 39px;
 }
 nav .menu{
     display: flex;
@@ -49,30 +54,51 @@ nav .icon{
     height: 22px;
     padding-left: 12px;
 }
+@media(min-width:768px){
+    nav .logo{
+        display: block;
+        height: 26px;
+        padding-left: 13px;
+    }
+    nav .icon{
+        display: none;
+    }
+}
 a.link-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
-    font-size: 8px;
+    font-size: 11px;
     font-weight: bolder;
     letter-spacing: 3px;
-    margin: 4px;
-    padding: 11px;
+    margin-right: 17px;
     color:black
 }
 a.link-search{
     display: none;
 }
 a.link-subs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28px;
+    width: 95px;
     text-transform: uppercase;
-    font-size: 8px;
+    font-size: 10px;
     letter-spacing: 2px;
     font-weight: bolder;
+    margin-left: 2px;
+    margin-right: 20px;
+    padding: 5px;
     box-shadow: inset 0 0 0 0 #ffcc00;
     color: white;
     background-color: black;
-    margin: 4px;
-    padding: 11px;
     transition: color .3s ease-in-out, box-shadow .4s ease-in-out;
 
+}
+a.link-news{
+    display: none;
 }
 a.link-subs:hover{
     color: black;
@@ -85,10 +111,59 @@ a.link-arrows{
     display: flex;
     align-self: center;
     color: black;
-    margin-left: 12px;
+    margin-left: 7px;
     margin-right: 20px;
 }
-
+@media(min-width:768px){
+    a.link-search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        margin-right: 7px;
+    }
+    a.link-menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 11px;
+        font-weight: bolder;
+        letter-spacing: 2px;
+        margin-right: none;
+        color:black
+    }
+    a.link-news{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        margin: 10px;
+        font-weight: 500;
+        color:black
+    }
+    a.link-news{
+        background:
+        linear-gradient(
+        to right,
+        #ffcc00,
+        #ffcc00
+        );
+        background-size: 100% 1.5px, 0 1.5px;
+        background-position: 100% 100%, 0 100%;
+        background-repeat: no-repeat;
+        transition: background-size 200ms;
+    }
+    a.link-news:hover{
+        --_d: 100%;
+        color: black;
+        background: 
+            linear-gradient(#ffcc00 0 0) 
+            bottom/100% var(--_d, 0) no-repeat;
+        transition: 0.2s;
+        cursor: pointer;
+    }
+}
 /*header*/
 .header{
     display: contents;
@@ -97,16 +172,16 @@ a.link-arrows{
 }
 .header .title{
     text-transform: uppercase;
-    font-size: 28px;
+    font-size: 40px;
     font-weight: bolder;
     letter-spacing: 3px;
-    margin-top: 33px;
-    margin-bottom: 10px;
+    margin-top: 80px;
+    margin-bottom: 20px;
 }
 .header .text{
-    font-size: 12px;
+    font-size: 16px;
     line-height: 1.4;
-    margin-bottom: none;
+    margin-bottom: 20px;
 }
 
 .header .text span{
@@ -131,118 +206,155 @@ header .text span:hover{
     cursor: pointer;
 }
 header .border{
-    width: 20px;
+    width: 50px;
     height: 3px;
     margin: 15px auto 0;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
     background-color: #ffcc00;
     line-height: 0;
 }
 
 /*main-news*/
+@media(min-width:768px){
+    main{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
 .main-news{
-    height: 300px;
-    max-width: fit-content;
+    position: relative;
+}
+.main-news-img{
+    height: 400px;
+    width: 100%;
     margin-bottom: 10px;
-    padding: 7px;
 }
-.main-news .main-news-block{
+.main-news-img img{
+    max-height: 100%;
+    width: 100%;
+}
+.main-news-block{
     position: absolute;
-    top: 350px;
-    left: 0;
-    margin-left: 20px;
-    padding: 7px;
+    top: 250px;
+    left: 20px;
 }
-.main-news .main-news-block h3{
-    margin-bottom: 0;
+.main-news-block h3{
     text-transform: uppercase;
-    font-size: 9px;
-    font-weight: bolder;
-    letter-spacing: 1.5px;
+    font-size: 13px;
+    letter-spacing: 3px;
+    margin-bottom: 0;
 }
-.main-news .main-news-block h3:hover{
+.main-news-block h3:hover{
     text-decoration: underline;
     cursor: pointer;
 }
-.main-news .main-news-block p{
+.main-news-block p{
     margin-top: 5px;
     margin-bottom: 5px;
-    font-size: 27px;
+    font-size: 35px;
     font-weight: bolder;
+    letter-spacing: 1px;
 }
-
 /*secondary-news*/
-.secondary-news{
-    margin-bottom: 0;
-    height: 300px;
-    max-width: fit-content;
-    padding: 7px;
+@media(min-width:768px){
+    .secondary-news-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .news{
+        flex-basis: 70%;
+    }
+    .todays-picks{
+        flex-basis: 30%;
+    }
 }
-.secondary-news .secondary-news-block{
-    margin-top: -20px;
-    height: 110px;
+.secondary-news{
+    height: 400px;
+}
+@media(min-width:768px){
+    .secondary-news:first-of-type{
+        flex-basis: 50%;
+        margin-right: 10px;
+    }
+    .secondary-news:last-of-type{
+        flex-basis: 50%;
+        margin-right: 10px;
+    }
+}
+.secondary-news img{
+    height: 250px;
+    width: 100%;
+    margin-bottom: 0;
+}
+.secondary-news-block{
+    height: 140px;
     background-color: white;
     color: black;
+    margin-top: -22px;
     padding: 10px;
+}
+.secondary-news-block h3{
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: gray;
+}
+.secondary-news-block h3:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.secondary-news-block p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
 .secondary-news .read-btn{
     color: black;
-}
-.secondary-news .secondary-news-block h3{
-    margin-top: 25px;
-    margin-bottom: 0;
-    text-transform: uppercase;
-    font-size: 9px;
-    font-weight: bolder;
-    letter-spacing: 1.5px;
-}
-.secondary-news .secondary-news-block h3:hover{
-    text-decoration: underline;
-    cursor: pointer;
-}
-.secondary-news .secondary-news-block p{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-weight: bolder;
 }
 .secondary-news-img{
     overflow: hidden;
 }
 .secondary-news:hover img{
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
 /*todays-picks*/
-.todays-picks{
-    display: block;
-    justify-items: center;
-}
-.todays-picks .todays-picks-title{
+.todays-picks h2{
+    margin-top: 5px;
     font-size: 30px;
     text-transform: uppercase;
-    border-left: 15px #ffcc00;
+    border-left: 5px solid #ffcc00;
     padding-left: 20px;
     letter-spacing: 3px;
-    cursor: text;
 }
-.todays-picks .pick-item{
+.pick-item{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.todays-picks .pick-item:hover{
-    cursor: pointer;   
+.pick-item:hover{
+    cursor: pointer;
 }
-.todays-picks .pick-item img{
+.pick-item img{
     width: 90px;
     height: 90px;
 }
-.todays-picks .pick-item .pick-item-text{
-    width: 200px;
+.pick-item-text{
+    width: 350px;
     color: white;
+    margin-left: 15px;
 }
-.todays-picks .pick-item .pick-item-text .todays-picks-block-title-p{
+.pick-item-text h3{
+    margin-top: 0;
+    margin-bottom: 5px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.pick-item .todays-picks-block-title-p{
     margin-top: 0;
     margin-bottom: 5px;
     padding: 2px;
@@ -253,47 +365,40 @@ header .border{
     text-transform: uppercase;
     font-size: 10px;
 }
-.todays-picks .pick-item .pick-item-text .todays-picks-block-title{
-    margin-top: 0;
-    margin-bottom: 5px;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-size: 10px;
+.pick-item-text a{
+    color: white;
+    font-size: 12px;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
 }
-.todays-picks .pick-item .pick-item-text .link-todays-picks-text{
-    margin-top: 0;
+.pick-item-text a:hover{
+    text-decoration: underline;
+}
+
+.link-see{
+    display: flex;
+    justify-content: left;
+}
+.link-see .link-see-more{
+    text-transform: uppercase;
     color: white;
     font-size: 11px;
     font-weight: bolder;
-    letter-spacing: 0.5px
-}
-.todays-picks .pick-item .pick-item-text .link-todays-picks-text:hover{
-    text-decoration: underline;
-}
-.todays-picks .link-see{
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-.todays-picks .link-see .link-see-more{
-    text-transform: uppercase;
-    color: white;
-    font-size: 9px;
-    font-weight: bolder;
     text-align: center;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    padding-bottom: 2px;
     background:
     linear-gradient(
       to right,
       #ffcc00,
       #ffcc00
     );
-    background-size: 100% 1.5px, 0 1.5px;
+    background-size: 100% 2px, 0 2px;
     background-position: 100% 100%, 0 100%;
     background-repeat: no-repeat;
     transition: background-size 200ms;
 }
-.todays-picks .link-see .link-see-more:hover{
+.link-see .link-see-more:hover{
     --_d: 100%;
     color: black;
     background: 
@@ -302,26 +407,3 @@ header .border{
     transition: 0.2s;
     cursor: pointer;
 }
-/*
-.header .text span{
-    background:
-    linear-gradient(
-      to right,
-      #ffcc00,
-      #ffcc00
-    );
-    background-size: 100% 1.5px, 0 1.5px;
-    background-position: 100% 100%, 0 100%;
-    background-repeat: no-repeat;
-    transition: background-size 200ms;
-}
-header .text span:hover{
-    --_d: 100%;
-    color: black;
-    background: 
-        linear-gradient(#ffcc00 0 0) 
-        bottom/100% var(--_d, 0) no-repeat;
-    transition: 0.2s;
-    cursor: pointer;
-}
-*/
